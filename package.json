@@ -1,0 +1,29 @@
+{
+  "name": "Proyecto1-TopicosTelematica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpzapata99/Proyecto1-TopicosTelematica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpzapata99/Proyecto1-TopicosTelematica/issues"
+  },
+  "homepage": "https://github.com/jpzapata99/Proyecto1-TopicosTelematica#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
