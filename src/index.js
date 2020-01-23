@@ -10,7 +10,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(morgan('dev'))
 app.use(express.json())
 //Rutas
-//app.use(require('./routes/task.routes.js'))
+app.use('/api/registros',require('./routes/registers.routes.js'))
 //Archivos estaticos
 app.use(express.static(path.join(__dirname,'public')))
 
