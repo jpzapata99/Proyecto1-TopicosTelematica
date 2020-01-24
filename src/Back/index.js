@@ -12,7 +12,8 @@ app.use(express.json())
 //Rutas
 app.use('/api/registros',require('./routes/registers.routes.js'))
 //Archivos estaticos
-app.use(express.static(path.join(__dirname,'public')))
+console.log(path.join(__dirname,'../Front/public/'))
+app.use(express.static(path.join(__dirname,'../Front/public/')))
 
 //Inicializando el servidor
 app.listen(app.get('port'),()=>{
