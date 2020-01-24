@@ -2,15 +2,16 @@ const express = require('express')
 const router = express.Router(); 
 const Register = require ('./../models/Register')
 
-router.get('/',async (req,res)=>{
-    //let registers=[]
-    //console.log(req.params.nombre)
-    //if (req.params.nombre!=""){
-    //    registers = await Register.find({"nombre": req.params.nombre})
-    //}
-    //else{
-    const   registers =  await Register.find()
-    //}
+router.get('/:nombre',async (req,res)=>{
+    let registers=[]
+    console.log(req.params.nombre)
+    if (req.params.nombre!="vacio"){
+        registers = await Register.find({"nombre": req.params.nombre})
+    }
+    else{
+        console.log("Llego donde era")
+         registers =  await Register.find()
+    }
     console.log(registers)
     res.json(registers)   
 })

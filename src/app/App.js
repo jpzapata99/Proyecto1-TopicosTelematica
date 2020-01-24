@@ -12,7 +12,12 @@ class App extends Component{
         this.handleChange = this.handleChange.bind(this)
     }
     verDatos(e){
-        fetch('/api/registros')
+        let nombreAux = this.state.nombre
+        if(this.state.nombre==""){
+            nombreAux="vacio"
+        }
+        console.log(nombreAux)
+        fetch('/api/registros/'+nombreAux)
             .then(res => res.json())
             .then(data=> {
                 this.setState({registros:data})
