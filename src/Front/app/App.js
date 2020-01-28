@@ -17,7 +17,7 @@ class App extends Component{
             nombreAux="vacio"
         }
         console.log(nombreAux)
-        fetch('/api/registros/'+nombreAux)
+        fetch('/api/registro/'+nombreAux)
             .then(res => res.json())
             .then(data=> {
                 this.setState({registros:data})

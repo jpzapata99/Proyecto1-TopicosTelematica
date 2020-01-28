@@ -21,7 +21,7 @@ router.post('/', async (req,res)=>{
     const register = new Register({nombre, temperatura, humedad,longitud, latitud});
     console.log(register)
     await register.save()
-    res.json("recibido")
+    res.json("¡Registro almacenado!")
 })
 
 
