@@ -25,11 +25,11 @@ $ npm run webpack
 ### Funcionamiento
 Por medio de el programa PostMan realizamos la inserción de los datos, simplemente realizando un POST a nuestro servidor a la dirección http://localhost:3000/api/registro como se ve a continuación:
 
-![alt text]: {Muestra1.PNG}
+![Alt text]: {Muestra1.PNG}
 
 Para la visualización de los datos ingresamos a http://localhost:3000/ e ingresamos el nombre de usuario del cual queremos ver los registros, como se ve en la siguiente imagen:
 
-![alt text]: {Muestra2.PNG}
+![Alt text]: {Muestra2.PNG}
 
 **Free Software, Hell Yeah!**
 
