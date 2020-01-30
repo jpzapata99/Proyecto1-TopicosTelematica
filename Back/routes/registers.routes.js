@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router(); 
 const Register = require ('./../models/Register')
 
-router.get('/:nombre',async (req,res)=>{
+router.get('/:nombre',async (req,res,next)=>{
     let registers=[]
     console.log(req.params.nombre)
     if (req.params.nombre!="vacio"){
@@ -16,7 +16,7 @@ router.get('/:nombre',async (req,res)=>{
     res.json(registers)   
 })
 
-router.post('/', async (req,res)=>{
+router.post('/', async (req,res,next)=>{
     const { nombre, temperatura, humedad,longitud, latitud} = req.body
     const register = new Register({nombre, temperatura, humedad,longitud, latitud});
     console.log(register)
@@ -24,5 +24,20 @@ router.post('/', async (req,res)=>{
     res.json("¡Registro almacenado!")
 })
 
+router.get('/signup',(req,res,next)=>{
+
+})
+
+router.post('/signup',(req,res,next)=>{
+    
+})
+
+router.get('/sigin',(req,res,next)=>{
+
+})
+
+router.post('/sigin',(req,res,next)=>{
+    
+})
 
 module.exports = router; 
