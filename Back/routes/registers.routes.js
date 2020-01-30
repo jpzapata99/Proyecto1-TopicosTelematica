@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router(); 
 const Register = require ('./../models/Register')
+const Sensor = require ('./../models/Sensor')
 
 router.get('/:nombre',async (req,res,next)=>{
     let registers=[]
@@ -17,27 +18,29 @@ router.get('/:nombre',async (req,res,next)=>{
 })
 
 router.post('/', async (req,res,next)=>{
-    const { nombre, temperatura, humedad,longitud, latitud} = req.body
-    const register = new Register({nombre, temperatura, humedad,longitud, latitud});
-    console.log(register)
-    await register.save()
-    res.json("¡Registro almacenado!")
-})
-
-router.get('/signup',(req,res,next)=>{
-
-})
-
-router.post('/signup',(req,res,next)=>{
-    
-})
-
-router.get('/sigin',(req,res,next)=>{
-
-})
-
-router.post('/sigin',(req,res,next)=>{
-    
+    const { nombre, temperatura, humedad,longitud, latitud,apiKey} = req.body
+    const existApiKey =  async (nombre, apiKey)=>{
+        const sensor = await Sensor.findOne({
+            nombre:nombre
+        })
+        if(sensor){
+            if(sensor.apiKey==apiKey){
+                return true
+            }else{
+                return false
+            }
+        }else{
+            return false
+        }
+    }
+    const resultado = await existApiKey(nombre,apiKey)
+    if(resultado){
+        const register = new Register({nombre, temperatura, humedad,longitud, latitud,apiKey});
+        await register.save()
+        res.json("¡Registro almacenado!")
+    }else{
+        res.json("ApiKey invalido")
+    }
 })
 
 module.exports = router; 

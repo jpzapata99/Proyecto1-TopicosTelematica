@@ -17,6 +17,7 @@ app.options('*', cors());
 //Rutas
 app.use('/api/user',require('./routes/user.routes.js'))
 app.use('/api/registro',require('./routes/registers.routes.js'))
+app.use('/api/sensor',require('./routes/sensor.routes.js'))
 //Archivos estaticos
 console.log(path.join(__dirname,'../Front/public/'))
 //app.use(express.static(path.join(__dirname,'../Front/public/')))

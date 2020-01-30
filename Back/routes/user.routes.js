@@ -3,7 +3,6 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const users = express.Router()
-
 const User = require("../models/User")
 users.use(cors())
 
@@ -48,6 +47,7 @@ users.post('/login', (req, res,next) => {
     })
       .then(user => {
         if (user) {
+          console.log("hay user")
           if (bcrypt.compareSync(req.body.password, user.password)) {
             // Passwords match
             const payload = {
