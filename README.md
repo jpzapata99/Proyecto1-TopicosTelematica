@@ -30,19 +30,29 @@ $ npm start
 ```
 # Funcionamiento
 Por medio de el programa PostMan realizamos la inserción de usuarios, sensores, y registros. Para el caso de los sensores la inserción del dato retorna una API KEY que servirá de verificación en el momento del ingreso de datos. A continuación se puede ver un ejemplo de cada uno.
-#Registro de usuario
+
+### Registro de usuario
+
 ![Alt text](IngresoUsuario.PNG)
-#Registro de sensor
+
+### Registro de sensor
+
 ![Alt text](IngresoSensor.PNG)
-#Registro de datos del sensor
+
+### Registro de datos del sensor
+
 ![Alt text](IngresoRegistro.PNG)
 
 Para la visualización de los datos ingresamos a http://localhost:3000/ e ingresamos con nuestro usuario y contraseña, siguiendo con el ejemplo anterior veamos:
-#Login de usuario
+
+### Login de usuario
+
 ![Alt text](Login.PNG)
 
 Una vez dentro de la sesión de un usuario podemos visualizar los datos de los sensores que se quiera:
-#Visualización
+
+### Visualización
+
 ![Alt text](visualizacion.PNG)
 
 **Free Software, Hell Yeah!**
