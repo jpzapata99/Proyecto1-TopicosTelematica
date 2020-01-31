@@ -1,7 +1,8 @@
 # Descripción
 Lo que se realizó en este proyecto fue basicamente una aplicación web bajo un stack MERN. El fin principal de está aplicación es poder registrar datos en la BD correspondientes a datos de sensores como: humedad, temperatura, localización. Además, tambien se pueden visualizar los datos recolectados en la base de datos de dos formas:
-  - Ingresando un nombre de usuario, se podrá ver los registros asociados especificamente a ese usuario.
-  - Sin nombre de usuario, se podrá ver todos los registros de la base de datos.
+  - Ingresando un nombre del sensor especifico, se podrá ver los registros asociados especificamente a ese sensor.
+  - Sin nombre del sensor, se podrá ver todos los registros de la base de datos.
+De igual forma se puede realizar registro de usuarios, sensores y registros de cada uno de los sensores por medio de POST MAN.
 
 ### Tecnologías usadas
 Para la realización de este proyecto se usaron las siguientes tecnologías:
@@ -14,22 +15,32 @@ Para la realización de este proyecto se usaron las siguientes tecnologías:
 Se recomienda [Node.js](https://nodejs.org/) v4+ para correr.
 Después de clonar el repositorio, en su terminal realice los siguientes comandos:
 ```sh
+//Para la ejecucuón del Back-End
 $ cd Proyecto1-TopicosTelematica
+$ cd Back
 $ npm install 
-$ npm run dev //Para ejecutar el back-end
+$ npm run dev 
 ```
 En  otra consola debemos ejecutar el FRONT-END
 ```sh
-$ npm run webpack
+$cd Proyecto1-TopicosTelematica
+$ cd Front
+$ npm install 
+$ npm start
 ```
 ### Funcionamiento
-Por medio de el programa PostMan realizamos la inserción de los datos, simplemente realizando un POST a nuestro servidor a la dirección http://localhost:3000/api/registro como se ve a continuación:
+Por medio de el programa PostMan realizamos la inserción de usuarios, sensores, y registros. Para el caso de los sensores la inserción del dato retorna una API KEY que servirá de verificación en el momento del ingreso de datos. A continuación se puede ver un ejemplo de cada uno.
+![Alt text](IngresoUsuario.PNG)
+![Alt text](IngresoSensor.PNG)
+![Alt text](IngresoRegistro.PNG)
 
-![Alt text](Muestra1.PNG)
+Para la visualización de los datos ingresamos a http://localhost:3000/ e ingresamos con nuestro usuario y contraseña, siguiendo con el ejemplo anterior veamos:
 
-Para la visualización de los datos ingresamos a http://localhost:3000/ e ingresamos el nombre de usuario del cual queremos ver los registros, como se ve en la siguiente imagen:
+![Alt text](Login.PNG)
 
-![Alt text](Muestra2.PNG)
+Una vez dentro de la sesión de un usuario podemos visualizar los datos de los sensores que se quiera:
+
+![Alt text](visualizacion.PNG)
 
 **Free Software, Hell Yeah!**
 
