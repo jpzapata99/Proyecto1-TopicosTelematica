@@ -5,15 +5,12 @@ const Sensor = require ('./../models/Sensor')
 
 router.get('/:nombre',async (req,res,next)=>{
     let registers=[]
-    console.log(req.params.nombre)
     if (req.params.nombre!="vacio"){
         registers = await Register.find({"nombre": req.params.nombre})
     }
     else{
-        console.log("Llego donde era")
          registers =  await Register.find()
     }
-    console.log(registers)
     res.json(registers)   
 })
 

@@ -18,11 +18,8 @@ app.options('*', cors());
 app.use('/api/user',require('./routes/user.routes.js'))
 app.use('/api/registro',require('./routes/registers.routes.js'))
 app.use('/api/sensor',require('./routes/sensor.routes.js'))
-//Archivos estaticos
-console.log(path.join(__dirname,'../Front/public/'))
-//app.use(express.static(path.join(__dirname,'../Front/public/')))
 
 //Inicializando el servidor
 app.listen(app.get('port'),()=>{
-    console.log(`Server on portt ${app.get('port')} `)
+    console.log(`Server on port ${app.get('port')} `)
 })

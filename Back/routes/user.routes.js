@@ -9,22 +9,17 @@ users.use(cors())
 process.env.SECRET_KEY ="secret"
 
 users.post('/',(req,res,next)=>{
-    console.log("llegó")
     const userData= {
         user:req.body.user,
         password:req.body.password
     }
-    console.log(userData)
     User.findOne({
         user:req.body.user
     })
     .then(user=>{
         if(!user){
             bcrypt.hash(req.body.password,10,(err,hash)=>{
-                console.log("Llega")
                 userData.password=hash
-                console.log(userData.password)
-                console.log(userData.user)
                 User.create(userData)
                 .then(user=>{
                     res.json({status:user.user+' resgistrado!'})
@@ -47,9 +42,7 @@ users.post('/login', (req, res,next) => {
     })
       .then(user => {
         if (user) {
-          console.log("hay user")
           if (bcrypt.compareSync(req.body.password, user.password)) {
-            // Passwords match
             const payload = {
               _id: user._id
             }

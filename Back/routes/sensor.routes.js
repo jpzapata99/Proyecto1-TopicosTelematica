@@ -3,9 +3,7 @@ const router = express.Router();
 const Sensor = require ('./../models/Sensor')
 
 router.get('/:nombre',async (req,res,next)=>{
-    console.log(req.params.nombre)
     sensors = await Sensor.find({"nombre": req.params.nombre})
-    console.log(sensors)
     res.json(sensors)   
 })
 
@@ -16,7 +14,6 @@ router.post('/',  (req,res,next)=>{
     })
     .then(sensor=>{
         if(!sensor){
-            console.log(nombre)
             const key = {"apiKey" : nombre+String(Math.floor(100000 + Math.random() * 900000))}
             const {apiKey} =  key
             const sensor = new Sensor({nombre,apiKey});
