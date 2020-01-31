@@ -37,7 +37,7 @@ Por medio de el programa PostMan realizamos la inserción de usuarios, sensores,
 
 ### Registro de sensor
 
-![Alt text](IngresoSensor.PNG)
+![Alt text](README images/IngresoSensor.PNG)
 
 ### Registro de datos del sensor
 
