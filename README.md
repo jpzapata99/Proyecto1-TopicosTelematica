@@ -33,27 +33,27 @@ Por medio de el programa PostMan realizamos la inserción de usuarios, sensores,
 
 ### Registro de usuario
 
-![Alt text](IngresoUsuario.PNG)
+![Alt text](README_Images/IngresoUsuario.PNG)
 
 ### Registro de sensor
 
-![Alt text](README images/IngresoSensor.PNG)
+![Alt text](README_Images/IngresoSensor.PNG)
 
 ### Registro de datos del sensor
 
-![Alt text](IngresoRegistro.PNG)
+![Alt text](README_Images/IngresoRegistro.PNG)
 
 Para la visualización de los datos ingresamos a http://localhost:3000/ e ingresamos con nuestro usuario y contraseña, siguiendo con el ejemplo anterior veamos:
 
 ### Login de usuario
 
-![Alt text](Login.PNG)
+![Alt text](README_Images/Login.PNG)
 
 Una vez dentro de la sesión de un usuario podemos visualizar los datos de los sensores que se quiera:
 
 ### Visualización
 
-![Alt text](visualizacion.PNG)
+![Alt text](README_Images/visualizacion.PNG)
 
 **Free Software, Hell Yeah!**
 
