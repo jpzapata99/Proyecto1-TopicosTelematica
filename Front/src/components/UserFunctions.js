@@ -14,15 +14,4 @@ export const login = user => {
       })
   }
   
-  export const getProfile = user => {
-    return axios
-      .get('/api/user/visualizacion', {
-        headers: { Authorization: ` ${this.getToken()}` }
-      })
-      .then(response => {
-        return response.data
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }
+  
