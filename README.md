@@ -1,8 +1,20 @@
-# Descripción
-Lo que se realizó en este proyecto fue basicamente una aplicación web bajo un stack MERN. El fin principal de está aplicación es poder registrar datos en la BD correspondientes a datos de sensores como: humedad, temperatura, localización. Además, tambien se pueden visualizar los datos recolectados en la base de datos de dos formas:
-  - Ingresando un nombre del sensor especifico, se podrá ver los registros asociados especificamente a ese sensor.
-  - Sin nombre del sensor, se podrá ver todos los registros de la base de datos.
-De igual forma se puede realizar registro de usuarios, sensores y registros de cada uno de los sensores por medio de POST MAN.
+# Problemática
+La problemática que se está abordando en este proyecto es la carencia de un sistema de centralización, almacenamiento y visualización de datos que son enviados por medio de sensores. El enfoque de la problemática radica básicamente en la necesidad de tener un sistema que sea capaz de almacenar las peticiones con la información ( humedad, temperatura, latitud, longitud)  de los sensores de forma segura y que permitieran posterior al almacenamiento una visualización de datos.
+
+# Requisitos funcionales
+* El sistema tendrá un inicio de sesión para los usuarios de la aplicación 
+* El sistema contará con un registro de usuarios, sensores y datos, dichas peticiones se deberán realizar por medio de la herramientas POST-MAN.
+* El sistema entregará una ApiKey al usuario a la hora de registrar un sensor, está ApiKey debe ser creada por el mismo sistema para garantizar seguridad en el sistema.
+* El sistema tendrá un módulo de visualización de datos.
+* El sistema le dará la opción al usuario para que filtre los datos por el nombre de los sensores o dejarlo ver todos los datos de los sensores.
+# Requisitos no funcionales
+* El sistema tendrá un manejo de encriptación de los datos cuando estos viajen del Back-End al Front-End y viceversa.
+* El sistema garantizará que el sensor que esté ingresando un dato esté registrado en el sistema.
+* El sistema será intuitivo, ya que al resolver un problema sencillo y al tener tan pocas funcionalidades la navegación debe ser sencilla.
+* El sistema garantizará que las personas que están viendo los datos estén registrados (Al acceder por url sin logeo no dejará ver los datos).
+* El sistema garantizará que la ApiKey que entregue al usuario con el registro del sensor es única.
+* El sistema asegurará que en cada inicio de sesión exista un Token único que será la representación de que hay un usuario dentro de la plataforma.
+* El sistema responderá a las peticiones de los usuarios en un tiempo menor a 1 segundo.
 
 # Tecnologías usadas
 Para la realización de este proyecto se usaron las siguientes tecnologías:
