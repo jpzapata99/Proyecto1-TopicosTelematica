@@ -55,9 +55,15 @@ Por medio de el programa PostMan realizamos la inserción de usuarios, sensores,
 
 ![Alt text](README_Images/IngresoRegistro.PNG)
 
-Para la visualización de los datos ingresamos a http://localhost:3000/ e ingresamos con nuestro usuario y contraseña, siguiendo con el ejemplo anterior veamos:
+### Home
+
+Para la visualización de los datos ingresamos a http://localhost:3001/  
+
+![Alt text](README_Images/Home.PNG)
 
 ### Login de usuario
+
+Ingresamos con nuestro usuario y contraseña, siguiendo con el ejemplo anterior veamos:
 
 ![Alt text](README_Images/Login.PNG)
 
@@ -65,8 +71,11 @@ Una vez dentro de la sesión de un usuario podemos visualizar los datos de los s
 
 ### Visualización
 
+Visualización de un solo dato:
 ![Alt text](README_Images/visualizacion.PNG)
 
+Visualización de todos los datos:
+![Alt text](README_Images/Muestra3.PNG)
 **Free Software, Hell Yeah!**
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
